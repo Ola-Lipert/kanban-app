@@ -32,7 +32,7 @@ export function addNote(req, res) {
       });
   });
 }
-//usunięcie notatki - pojedyńczej notatki z linii??
+//usunięcie notatki - pojedyńczej notatki z linii - nie wiem jak??
 export function deleteNote(req, res) {
   Note.findOne({ id: req.params.noteId }).exec((err, note) => {
     if (err) {
