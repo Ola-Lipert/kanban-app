@@ -45,3 +45,12 @@ export function deleteNote(req, res) {
   });
 }
 
+export function editNote(req, res) {
+  Note.edit({ id: req.params.noteId }, req.body.note).exec((err, note) => {
+    if (err) {
+      res.status(500).send(err);
+    }
+    res.json({ notes });
+  });
+}
+
