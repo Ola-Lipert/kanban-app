@@ -1,4 +1,5 @@
 import Note from '../models/note';
+import Lane from '../models/lane';
 import uuid from 'uuid';
 
 export function getSomething(req, res) {
